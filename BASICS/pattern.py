@@ -91,3 +91,59 @@ for i in range(1,n+1):
         print(k, end="")
 
     print()
+print("\nAlpha-Triangle Pattern")
+N=5
+ascii_code = 65+N-1
+
+for i in range(0,N+1):
+    for j in range(0,i):
+        start_char=ascii_code-i+1
+        print(chr(start_char+j), end="")
+
+    print()
+
+print("Symmetric-Void Pattern")
+#Upper pattern
+for i in range(0,N):
+    for j in range(i,N):
+        print("*", end="")
+    for k in range(0,i):
+        print(" ", end="")
+    for l in range(0, i):
+        print(" ", end="")
+    for j in range(i,N):
+        print("*", end="")
+    print()
+#lower pattern
+for i in range(0,N):
+    for j in range(0, i+1):
+        print("*", end="")
+    for k in range(N-i, 1, -1):
+        print(" ", end="")
+    for l in range(N-i, 1, -1):
+        print(" ", end="")
+    for j in range(0, i+1):
+        print("*", end="")
+    print()
+N=4
+print("Hollow Rectangle Pattern")
+for i in range(0,N):
+    for j in range(0,N):
+        if((i==0) or (j==0) or (j==N-1) or (i==N-1)):
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+N=6
+
+print("The Number Pattern")
+for i in range(0,2*N-1):
+    for j in range(0,2*N-1):
+        top = i
+        left = (2*N - 2) - i
+        bottom = j
+        right = (2*N - 2) - j
+        minDistance = min(top, left, bottom, right)
+        print(N-minDistance, end="")
+        print(" ", end="")
+    print()
